@@ -1,0 +1,396 @@
+*{
+    margin: 0;
+    padding: 0;
+ }
+ html{
+    font-size: 18px;
+ }
+ .headingmain{
+   width:100%;
+   height:15%;
+   background-color: rgb(224, 59, 9);
+ }
+ .heading{
+   width:60%;
+   height: 70%;
+   color:black;
+   font-size: 3rem;
+   margin-left: 30%;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+ }
+ 
+ .background{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right,rgba(43, 21, 240, 0.253),rgba(13, 28, 238, 0.308) ),url(https://th.bing.com/th/id/OIP.lWSHrKyU1LwGvIi2_aFseAHaC9?w=319&h=140&c=7&o=5&dpr=1.56&pid=1.7);
+    background-size: 100% 100%;
+ }
+ .number{
+     width: 50%;
+     height: 50%;
+     font-size: 2rem;
+    color: aliceblue;
+    text-align:centre;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-weight: 600;
+     margin: 1rem 0 0 1rem;
+    
+ }
+.box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8,.box9,.box10,.box11,.box12,.box13,.box14,.box15{
+  
+     background-image: url(https://th.bing.com/th/id/OIP.YXGBbu1KC2rd3vu4gBVgEwHaFj?pid=ImgDet&w=170&h=127&c=7&dpr=1.56);
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+     width: 24%;
+     height:99%;
+     cursor:pointer;
+     float: left;
+     border: 1px solid wheat;
+     margin: 0.1% 0.1% 0.1% 0.1%;
+     
+     
+ }
+.blank{
+     background-color: white ;
+     cursor: default;
+     width: 24%;
+     height:99%;
+     float: left;
+      border: 1px solid rgb(180, 179, 245);
+     margin: 0.1% 0.1% 0.1% 0.1%;
+
+
+ }
+.clear{
+   clear: both;
+}
+.timebox{
+   padding-top:1%;
+   text-align: center;
+   color:aliceblue;
+   width: 8%;
+   height:7%;
+   background-color: rgb(0, 26, 255);
+   float: left;
+   border: 4px solid wheat;
+   border-radius: 10%;
+   margin: 5% 3% 2% 25%;
+  
+}
+.blocksolvedbox{
+   padding-top:1%;
+   text-align: center;
+   color:aliceblue;
+   width: 8%;
+   height:7%;
+   background-color: rgb(0, 26, 255);
+   float: left;
+  
+   border: 4px solid wheat;
+   border-radius: 10%;
+   margin: 5% 3% 2%  0;
+}
+
+#table{
+   display: table;
+   margin: 0% 0 0 34%;
+   width: 25%;
+   height:50%;
+}
+.button{
+   margin-left: 42%;
+   margin-top:3%;
+   width: 8%;
+   height: 6%;
+}
+@media  screen and (max-width:500px) {
+  html{
+      font-size: 8px;
+   }
+   .heading{
+   width:80%;
+   height: 70%;
+   margin-left: 10%;
+   padding-top:4%;
+   color:black;
+   font-size: 3rem;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   }
+   #table{
+   display: table;
+   margin: 3% 0 0 29%;
+   width: 40%;
+   height:40%;
+   
+}
+.box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8,.box9,.box10,.box11,.box12,.box13,.box14,.box15{
+  
+  background-image: url(https://th.bing.com/th/id/OIP.YXGBbu1KC2rd3vu4gBVgEwHaFj?pid=ImgDet&w=170&h=127&c=7&dpr=1.56);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: black;
+  width: 22%;
+  height:99%;
+  cursor:pointer;
+  float: left;
+  border: 1px solid wheat;
+  margin: 0.1% 0.1% 0.1% 0.1%;
+  
+  
+}
+.blank{
+     background-color: white ;
+     cursor: default;
+     width: 22%;
+     height:99%;
+     float: left;
+      border: 1px solid rgb(180, 179, 245);
+     margin: 0.1% 0.1% 0.1% 0.1%;
+
+
+ }
+.number{
+   margin: 1.5rem 0 0 0.8rem;
+}
+.button{
+   margin-left: 42%;
+   margin-top:4%;
+   width: 12%;
+   height: 6%;
+}
+ 
+}
+@media  screen and (min-width:500px) {
+  html{
+      font-size: 10px;
+   }
+   .heading{
+   width:70%;
+   height: 70%;
+   margin-left: 20%;
+   padding-top:4%;
+   color:black;
+   font-size: 3rem;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   }
+   #table{
+   display: table;
+   margin: 3% 0 0 29%;
+   width: 40%;
+   height:40%;
+   
+}
+.box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8,.box9,.box10,.box11,.box12,.box13,.box14,.box15{
+  
+  background-image: url(https://th.bing.com/th/id/OIP.YXGBbu1KC2rd3vu4gBVgEwHaFj?pid=ImgDet&w=170&h=127&c=7&dpr=1.56);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: black;
+  width: 23.5%;
+  height:99%;
+  cursor:pointer;
+  float: left;
+  border: 1px solid wheat;
+  margin: 0.1% 0.1% 0.1% 0.1%;
+  
+  
+}
+.blank{
+     background-color: white ;
+     cursor: default;
+     width: 23.5%;
+     height:99%;
+     float: left;
+      border: 1px solid rgb(180, 179, 245);
+     margin: 0.1% 0.1% 0.1% 0.1%;
+
+
+ }
+.number{
+   margin: 2rem 0 0 2rem;
+}
+.button{
+   margin-left: 42%;
+   margin-top:4%;
+   width: 12%;
+   height: 6%;
+}
+ 
+}
+@media  screen and (max-height:500px) {
+  html{
+      font-size: 11px;
+   }
+   .heading{
+   width:70%;
+   height: 70%;
+   margin-left: 20%;
+   padding-top:2%;
+   color:black;
+   font-size: 3rem;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   }
+   #table{
+   display: table;
+   margin: -3% 0 0 31%;
+   width: 40%;
+   height:40%;
+   
+}
+.box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8,.box9,.box10,.box11,.box12,.box13,.box14,.box15{
+  
+  background-image: url(https://th.bing.com/th/id/OIP.YXGBbu1KC2rd3vu4gBVgEwHaFj?pid=ImgDet&w=170&h=127&c=7&dpr=1.56);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: black;
+  width: 23.5%;
+  height:99%;
+  cursor:pointer;
+  float: left;
+  border: 1px solid wheat;
+  margin: 0.1% 0.1% 0.1% 0.1%;
+  
+  
+}
+.blank{
+     background-color: white ;
+     cursor: default;
+     width: 23.5%;
+     height:99%;
+     float: left;
+      border: 1px solid rgb(180, 179, 245);
+     margin: 0.1% 0.1% 0.1% 0.1%;
+
+
+ }
+.number{
+   margin: 1rem 0 0 2rem;
+}
+.button{
+   margin-left: 42%;
+   margin-top:2%;
+   width: 12%;
+   height: 6%;
+}
+.timebox,.blocksolvedbox{
+   width:10%;
+   height: 8%;
+}
+ 
+}
+@media  only screen and (min-width:900px) {
+  html{
+      font-size: 14px;
+   }
+   .heading{
+   width:60%;
+   height: 70%;
+   color:black;
+   font-size: 3rem;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   margin-left: 30%;
+   }
+   #table{
+   display: table;
+   margin: 0% 0 0 35%;
+   width: 30%;
+   height:50%;
+   
+}
+.box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8,.box9,.box10,.box11,.box12,.box13,.box14,.box15{
+  
+  background-image: url(https://th.bing.com/th/id/OIP.YXGBbu1KC2rd3vu4gBVgEwHaFj?pid=ImgDet&w=170&h=127&c=7&dpr=1.56);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: black;
+  width: 22%;
+  height:99%;
+  cursor:pointer;
+  float: left;
+  border: 1px solid wheat;
+  margin: 0.1% 0.1% 0.1% 0.1%;
+  
+  
+}
+.blank{
+     background-color: white ;
+     cursor: default;
+     width: 22%;
+     height:99%;
+     float: left;
+      border: 1px solid rgb(180, 179, 245);
+     margin: 0.1% 0.1% 0.1% 0.1%;
+
+
+ }
+.number{
+   margin: 1.5rem 0 0 1.8rem;
+}
+.button{
+   margin-left: 45%;
+   margin-top:1.5%;
+   width: 8%;
+   height: 6%;
+}
+ 
+}
+@media  only screen and (max-height:400px) {
+      html{
+          font-size: 8px;
+       }
+       .heading{
+       width:70%;
+       height: 70%;
+       margin-left: 30%;
+       color:black;
+       font-size: 2rem;
+       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       }
+       #table{
+       display: table;
+       margin: -2% 0 0 37%;
+       width: 29%;
+       height:48%;
+       
+    }
+    .box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8,.box9,.box10,.box11,.box12,.box13,.box14,.box15{
+      
+      background-image: url(https://th.bing.com/th/id/OIP.YXGBbu1KC2rd3vu4gBVgEwHaFj?pid=ImgDet&w=170&h=127&c=7&dpr=1.56);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-color: black;
+      width: 22%;
+      height:99%;
+      cursor:pointer;
+      float: left;
+      border: 1px solid wheat;
+      margin: 0.1% 0.1% 0.1% 0.1%;
+      
+      
+    }
+    .blank{
+         background-color: white ;
+         cursor: default;
+         width: 22%;
+         height:98%;
+         float: left;
+          border: 1px solid rgb(180, 179, 245);
+         margin: 0.1% 0.1% 0.1% 0.1%;
+    
+    
+     }
+    .number{
+       margin: 1.5rem 0 0 1.8rem;
+    }
+    .button{
+       margin-left: 47%;
+       margin-top:0.5%;
+       width: 8%;
+       height: 6%;
+    }
+    .blocksolvedbox,.timebox{
+       margin-top: 1%;
+    }
+     
+       }

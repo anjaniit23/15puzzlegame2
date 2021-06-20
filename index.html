@@ -1,0 +1,209 @@
+<html>
+<head>
+ <title>15 Puzzle Game</title>
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" >
+ <meta name="viewport" content="width=device-width, initial-scale=1" > 
+ <link rel="stylesheet" type="text/css" href="style2.css"/>
+
+</head>
+<body onload="shuffle();timeStart();countStart();isGameCompleted();best();">
+   <script type="text/javascript">
+      var startpage;
+      var count;
+      var timediff;
+      function best(){
+         if(localStorage.getItem("bestMoves1")==null){
+            document.getElementById("bestfig").innerHTML="-";
+         }
+         else{
+            document.getElementById("bestfig").innerHTML=localStorage.getItem("bestMoves1");
+         }
+         
+      }
+      function countStart(){
+        count=0;
+        document.getElementById("stepcount").innerHTML=count;
+      }
+     
+      function isGameCompleted(){
+         var blocksolved1=0; var blocksolved2=0;var i;var j;
+         for(i=1;i<=4;i++){
+            for(j=1;j<=4;j++){
+               if(document.getElementById("cell"+i+j).innerText==(4*(i-1)+j)){
+                  ++blocksolved1;
+                 
+               }
+               if(document.getElementById("cell"+i+j).innerText==(4*(j-1)+i)){
+                  ++blocksolved2;
+               }
+            }
+         }
+          document.getElementById("blocksolved").innerHTML=Math.max(blocksolved1,blocksolved2);
+         if(blocksolved1==15||blocksolved2==15){
+            return 1;
+         }
+         else{
+            return 0;
+         }
+
+      }
+     
+      function swapbox(cell1,cell2){
+         var temp=document.getElementById(cell1).className;
+         document.getElementById(cell1).className=document.getElementById(cell2).className;
+         document.getElementById(cell2).className=temp;
+         var temp1=document.getElementById(cell1).innerHTML;
+         document.getElementById(cell1).innerHTML=document.getElementById(cell2).innerHTML;
+         document.getElementById(cell2).innerHTML=temp1;
+
+      }
+      function timeStart(){
+          startpage=new Date();
+      }
+      function time(){
+         var time=new Date();
+          timediff=(time-startpage)/1000;
+         document.getElementById("time").innerHTML=Math.round(timediff);
+      }
+      setInterval("time()",0);
+     
+      function shuffle(){
+         for(var row=1;row<=4;row++){
+            for(var col=1;col<=4;col++){
+              var rownew=Math.floor(Math.random()*4+1);
+              var colnew=Math.floor(Math.random()*4+1);
+              swapbox("cell"+rownew+colnew,"cell"+row+col);
+            }
+         }
+      }
+      
+      function clickBox(row,col){
+         var cell=document.getElementById("cell"+row+col);
+         var box=cell.className;
+         
+         if(box!="blank"){
+            if(col<4){
+               if(document.getElementById("cell"+row+ (col+1)).className=="blank"){
+                  swapbox("cell"+row+col,"cell"+row+(col+1));
+                  count++;
+                  document.getElementById("stepcount").innerHTML=count;
+                  if(isGameCompleted()){
+                      alert("Congratulations,you have completed the game!!");
+                      
+                      
+                      if(Math.round(timediff)<localStorage.getItem("bestMoves1")||(localStorage.getItem("bestMoves1")==null)){
+                      localStorage.setItem("bestMoves1",Math.round(timediff));
+                      document.getElementById("bestfig").innerHTML=localStorage.getItem("bestMoves1");}
+                      else{
+                        document.getElementById("bestfig").innerHTML=localStorage.getItem("bestMoves1");
+                      }
+                      
+                  }
+                  return;
+                  
+               }
+            }
+            if(col>1){
+               if(document.getElementById("cell"+row+(col-1)).className=="blank"){
+                  swapbox("cell"+row+col,"cell"+row+(col-1));
+                  count++;
+                  document.getElementById("stepcount").innerHTML=count;
+                  if(isGameCompleted()){
+                      alert("Congratulations,you have completed the game!!");
+                     
+                      if(Math.round(timediff)<localStorage.getItem("bestMoves1")||(localStorage.getItem("bestMoves1")==null)){
+                      localStorage.setItem("bestMoves1",Math.round(timediff));
+                      document.getElementById("bestfig").innerHTML=localStorage.getItem("bestMoves1");}
+                      else{
+                        document.getElementById("bestfig").innerHTML=localStorage.getItem("bestMoves1");
+                      }
+                  }
+                  return;
+               }
+            }
+            if(row<4){
+               if(document.getElementById("cell"+(row+1)+col).className=="blank"){
+                  swapbox("cell"+row+col,"cell"+(row+1)+col);
+                  count++;
+                  document.getElementById("stepcount").innerHTML=count;
+                  if(isGameCompleted()){
+                      alert("Congratulations,you have completed the game!!");
+                      
+                      if(Math.round(timediff)<localStorage.getItem("bestMoves1")||(localStorage.getItem("bestMoves1")==null)){
+                      localStorage.setItem("bestMoves1",Math.round(timediff));
+                      document.getElementById("bestfig").innerHTML=localStorage.getItem("bestMoves1");}
+                      else{
+                        document.getElementById("bestfig").innerHTML=localStorage.getItem("bestMoves1");
+                      }
+                  }
+                  return;
+               }
+            }
+            if(row>1){
+               if(document.getElementById("cell"+(row-1)+col).className=="blank"){
+                  swapbox("cell"+row+col,"cell"+(row-1)+col);
+                  count++;
+                  document.getElementById("stepcount").innerHTML=count;
+                  if(isGameCompleted()){
+                      alert("Congratulations,you have completed the game!!");
+                     
+                      if(Math.round(timediff)<localStorage.getItem("bestMoves1")||(localStorage.getItem("bestMoves1")==null)){
+                      localStorage.setItem("bestMoves1",Math.round(timediff));
+                      document.getElementById("bestfig").innerHTML=localStorage.getItem("bestMoves1");}
+                      else{
+                        document.getElementById("bestfig").innerHTML=localStorage.getItem("bestMoves1");
+                      }
+                  }
+                  return;
+               }
+            }
+         }
+      }
+       
+   </script>
+    <centre>
+       <div class="background" >
+          <div class="headingmain"> <div class="heading" >Classic 15 Puzzle Game!!</div></div>
+       <div>
+         <div class="timebox">Time<div id="time"> </div></div>
+         <div class="blocksolvedbox">Block solved<div id="blocksolved"></div></div>
+         <div class="blocksolvedbox">Best Figures<div id="bestfig" ></div></div>
+         <div class="blocksolvedbox">Step Count<div id="stepcount" ></div></div>
+       </div>
+       <div class="clear"></div>
+        <div  id="table" >
+        <div id="row1" style="display: table-row;">
+           <div id="cell11" class="box1" onClick="clickBox(1,1);"><div class="number" >1</div></div>
+           <div id="cell12" class="box2" onClick="clickBox(1,2);"><div class="number" >2</div></div>
+           <div id="cell13" class="box3" onClick="clickBox(1,3);"><div class="number" >3</div></div>
+           <div id="cell14" class="box4" onClick="clickBox(1,4);"><div class="number" >4</div></div>
+        </div>
+        <div id="row2" style="display: table-row;">
+           <div id="cell21" class="box5" onClick="clickBox(2,1);"><div class="number" >5</div></div>
+           <div id="cell22" class="box6" onClick="clickBox(2,2);"><div class="number" >6</div></div>
+           <div id="cell23" class="box7" onClick="clickBox(2,3);"><div class="number">7</div></div>
+           <div id="cell24" class="box8" onClick="clickBox(2,4);"><div class="number" >8</div></div>
+        </div>
+        <div id="row3" style="display: table-row;">
+           <div id="cell31" class="box9" onClick="clickBox(3,1);"><div class="number" >9</div></div>
+           <div id="cell32" class="box10" onClick="clickBox(3,2);"><div class="number">10</div></div>
+           <div id="cell33" class="box11" onClick="clickBox(3,3);"><div class="number" >11</div></div>
+           <div id="cell34" class="box12" onClick="clickBox(3,4);"><div class="number" >12</div></div>
+        </div>
+        <div id="row4" style="display: table-row;">
+            <div id="cell41" class="box13" onClick="clickBox(4,1);"><div class="number" >13</div></div>
+            <div id="cell42" class="box14" onClick="clickBox(4,2);"><div class="number">14</div></div>
+            <div id="cell43" class="box15" onClick="clickBox(4,3);"><div class="number" >15</div></div>
+            <div id="cell44" class="blank" onClick="clickBox(4,4);"><div class="number" style="margin: 23px 0 0 25px;"></div></div>
+         </div>
+        
+     </div> 
+     <div class="button"><button  style="width:100%;height: 100%;border-radius: 10%;cursor: pointer;" onClick="shuffle();timeStart();countStart();isGameCompleted();">New Game</button></div>
+  
+     </div>   
+    </centre>
+  
+   
+</body>
+</html>
